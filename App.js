@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import State from "./pages/State";
+import TxtInput from "./pages/TextInput";
 
 const App = () => {
   return (
     <View style={style.container}>
-      <State />
+      {/* <State /> */}
+      <TxtInput />
     </View>
   );
 };
