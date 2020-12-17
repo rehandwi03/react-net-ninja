@@ -1,40 +1,22 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import State from "./pages/State";
 
-export default function App() {
-  const [name, setName] = useState("shaun");
-  const [person, setPerson] = useState({
-    name: "mario",
-    age: 40,
-  });
-
-  const clickHandler = () => {
-    setName("chun-li");
-    setPerson({ name: "rehan", age: 21 });
-  };
-
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>My name is {name} </Text>
-      <Text>
-        His name is {person.name} and his age is {person.age}
-      </Text>
-      <View style={styles.buttonContainer}>
-        <Button title="Update State" onPress={clickHandler} />
-      </View>
+    <View style={style.container}>
+      <State />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
+export default App;
+
+const style = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
-  buttonContainer: {
-    marginTop: 20,
   },
 });
