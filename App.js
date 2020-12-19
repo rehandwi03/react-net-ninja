@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import List from "./pages/List";
 import State from "./pages/State";
 import TxtInput from "./pages/TextInput";
 
@@ -7,7 +8,8 @@ const App = () => {
   return (
     <View style={style.container}>
       {/* <State /> */}
-      <TxtInput />
+      {/* <TxtInput /> */}
+      <List />
     </View>
   );
 };
@@ -17,8 +19,8 @@ export default App;
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    // backgroundColor: "#fff",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
